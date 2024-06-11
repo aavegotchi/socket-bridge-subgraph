@@ -1,0 +1,24 @@
+enum TokenType {
+    ERC20
+    ERC721
+    ERC1155
+}
+
+type TokenContract @entity(immutable: true) {
+    id: Bytes!
+    symbol: String!
+    type: TokenType!
+}
+
+type BridgeTransfer @entity {
+    id: ID!
+    tokenContract: TokenContract!
+    connector: Bytes! # address
+    from: Bytes! # address
+    to: Bytes! # address
+    amount: BigInt!
+    fee: BigInt!
+    messageId: Bytes!
+    timestamp: BigInt!
+    txHash: Bytes!
+}
