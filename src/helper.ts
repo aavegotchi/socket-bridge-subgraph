@@ -22,14 +22,14 @@ export function getOrCreateBridgeTransfer(id: string): BridgeTransfer {
 
 export function findPolygonToken(vault: Address | null): TokenContract | null {
     const bridgeAddresses = polygonBridgeAddresses()
-    if(vault){
+    if (vault) {
         for(let i=0; i<bridgeAddresses.length; i++) {
             const addressParams = bridgeAddresses[i];
             const vaultAddress = addressParams.get('Vault')
             const symbol = addressParams.get('Symbol')
             const tokenType = addressParams.get('Type')
-            const tokenAddress = vaultAddress && (vault.equals(Address.fromString(vaultAddress))) ? addressParams.get('NonMintableToken') : null;
-            if(tokenAddress && symbol && tokenType) {
+            const tokenAddress = addressParams.get('NonMintableToken');
+            if (vaultAddress && (vault.equals(Address.fromString(vaultAddress))) && tokenAddress && symbol && tokenType) {
                 const tokenContract  = fetchToken(Address.fromString(tokenAddress));
                 tokenContract.symbol = symbol;
                 tokenContract.type = tokenType;

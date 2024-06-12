@@ -11,27 +11,27 @@ export function polygonBridgeAddresses(): Array<TypedMap<string, string>> {
 
     let fomoAddressParams: TypedMap<string, string> = new TypedMap<string, string>();
     fomoAddressParams.set("Symbol", "FOMO");
-    fomoAddressParams.set("NonMintableToken", "0x44a6e0be76e1d9620a7f76588e450fe4fa8e8c8");
+    fomoAddressParams.set("NonMintableToken", "0x44A6e0BE76e1D9620A7F76588e4509fE4fa8E8C8");
     fomoAddressParams.set("Vault", "0x321fCfC2cc0d45d2eb252A11bBA8274543819feB");
-    fudAddressParams.set("Type", "ERC20");
+    fomoAddressParams.set("Type", "ERC20");
 
     let alphaAddressParams: TypedMap<string, string> = new TypedMap<string, string>();
     alphaAddressParams.set("Symbol", "ALPHA");
     alphaAddressParams.set("NonMintableToken", "0x6a3E7C3c6EF65Ee26975b12293cA1AAD7e1dAeD2");
     alphaAddressParams.set("Vault", "0xc87653358D5EDc7716057c865b8cD9ac5eB44A16");
-    fudAddressParams.set("Type", "ERC20");
+    alphaAddressParams.set("Type", "ERC20");
 
     let kekAddressParams: TypedMap<string, string> = new TypedMap<string, string>();
     kekAddressParams.set("Symbol", "KEK");
     kekAddressParams.set("NonMintableToken", "0x42E5E06EF5b90Fe15F853F59299Fc96259209c5C");
     kekAddressParams.set("Vault", "0x3D57A1a3429825C35B7C432F8885fA1D0Eede460");
-    fudAddressParams.set("Type", "ERC20");
+    kekAddressParams.set("Type", "ERC20");
 
     let gltrAddressParams: TypedMap<string, string> = new TypedMap<string, string>();
     gltrAddressParams.set("Symbol", "GLTR");
     gltrAddressParams.set("NonMintableToken", "0x3801C3B3B5c98F88a9c9005966AA96aa440B9Afc");
     gltrAddressParams.set("Vault", "0x8B2D15F61B99De5Fd53dfCFFf8AF995f17f9536d");
-    fudAddressParams.set("Type", "ERC20");
+    gltrAddressParams.set("Type", "ERC20");
 
     polygonBridgeAddresses.push(fudAddressParams);
     polygonBridgeAddresses.push(fomoAddressParams);
