@@ -20,9 +20,9 @@ dataSources:
                 file: ./abis/Contract.json
           eventHandlers:
               - event: BridgingTokens(address,address,address,uint256,bytes32)
-                handler: handleBridgingTokens
+                handler: handleBridgingTokensOnPolygon
               - event: TokensBridged(address,address,uint256,bytes32)
-                handler: handleTokensBridged
+                handler: handleTokensBridgedOnPolygon
           file: ./src/mapping.ts
     - kind: ethereum/contract
       name: alpha
@@ -42,9 +42,9 @@ dataSources:
                 file: ./abis/Contract.json
           eventHandlers:
               - event: BridgingTokens(address,address,address,uint256,bytes32)
-                handler: handleBridgingTokens
+                handler: handleBridgingTokensOnPolygon
               - event: TokensBridged(address,address,uint256,bytes32)
-                handler: handleTokensBridged
+                handler: handleTokensBridgedOnPolygon
           file: ./src/mapping.ts
     - kind: ethereum/contract
       name: fomo
@@ -64,9 +64,9 @@ dataSources:
                 file: ./abis/Contract.json
           eventHandlers:
               - event: BridgingTokens(address,address,address,uint256,bytes32)
-                handler: handleBridgingTokens
+                handler: handleBridgingTokensOnPolygon
               - event: TokensBridged(address,address,uint256,bytes32)
-                handler: handleTokensBridged
+                handler: handleTokensBridgedOnPolygon
           file: ./src/mapping.ts
     - kind: ethereum/contract
       name: fud
@@ -86,9 +86,9 @@ dataSources:
                 file: ./abis/Contract.json
           eventHandlers:
               - event: BridgingTokens(address,address,address,uint256,bytes32)
-                handler: handleBridgingTokens
+                handler: handleBridgingTokensOnPolygon
               - event: TokensBridged(address,address,uint256,bytes32)
-                handler: handleTokensBridged
+                handler: handleTokensBridgedOnPolygon
           file: ./src/mapping.ts
     - kind: ethereum/contract
       name: gltr
@@ -108,7 +108,7 @@ dataSources:
                 file: ./abis/Contract.json
           eventHandlers:
               - event: BridgingTokens(address,address,address,uint256,bytes32)
-                handler: handleBridgingTokens
+                handler: handleBridgingTokensOnPolygon
               - event: TokensBridged(address,address,uint256,bytes32)
-                handler: handleTokensBridged
+                handler: handleTokensBridgedOnPolygon
           file: ./src/mapping.ts

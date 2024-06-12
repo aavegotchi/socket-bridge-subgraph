@@ -1,5 +1,8 @@
 import {TypedMap} from "@graphprotocol/graph-ts";
 
+export const TX_BRIDGING = "BRIDGING"
+export const TX_BRIDGED = "BRIDGED"
+
 export function polygonBridgeAddresses(): Array<TypedMap<string, string>> {
     let polygonBridgeAddresses: Array<TypedMap<string, string>> = new Array<TypedMap<string, string>>();
 

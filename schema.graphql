@@ -4,6 +4,11 @@ enum TokenType {
     ERC1155
 }
 
+enum TxType {
+    BRIDGING
+    BRIDGED
+}
+
 type TokenContract @entity(immutable: true) {
     id: Bytes!
     symbol: String!
@@ -12,13 +17,14 @@ type TokenContract @entity(immutable: true) {
 
 type BridgeTransfer @entity {
     id: ID!
+    messageId: Bytes!
     tokenContract: TokenContract!
     connector: Bytes! # address
-    from: Bytes! # address
-    to: Bytes! # address
+    sender: Bytes # address (for bridged, it could be null)
+    receiver: Bytes! # address
     amount: BigInt!
-    fee: BigInt!
-    messageId: Bytes!
+    fee: BigInt # for bridged, it could be null
+    type: TxType!
     timestamp: BigInt!
     txHash: Bytes!
 }
