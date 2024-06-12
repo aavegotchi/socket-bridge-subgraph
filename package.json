@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "codegen": "graph codegen",
-    "build": "graph build"
+    "build": "graph build",
+    "codegen:base": "graph codegen subgraph.base.yaml",
+    "build:base": "graph build subgraph.base.yaml"
   },
   "keywords": [],
   "author": "orionstardust",

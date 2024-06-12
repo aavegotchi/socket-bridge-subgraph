@@ -1,5 +1,5 @@
 import {BridgingTokens, TokensBridged} from "../generated/kek/Contract"
-import {findPolygonToken, getOrCreateBridgeTransfer} from "./helper"
+import {findBaseToken, findPolygonToken, getOrCreateBridgeTransfer} from "./helper"
 import {TokenContract} from "../generated/schema";
 import {TX_BRIDGED, TX_BRIDGING} from "./constants";
 
@@ -12,6 +12,20 @@ export function handleBridgingTokensOnPolygon(event: BridgingTokens): void {
 
 export function handleTokensBridgedOnPolygon(event: TokensBridged): void {
     let tokenContract = findPolygonToken(event.address)
+    if (tokenContract) {
+        handleTokensBridged(event, tokenContract);
+    }
+}
+
+export function handleBridgingTokensOnBase(event: BridgingTokens): void {
+    let tokenContract = findBaseToken(event.address)
+    if (tokenContract) {
+        handleBridgingTokens(event, tokenContract);
+    }
+}
+
+export function handleTokensBridgedOnBase(event: TokensBridged): void {
+    let tokenContract = findBaseToken(event.address)
     if (tokenContract) {
         handleTokensBridged(event, tokenContract);
     }

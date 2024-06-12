@@ -1,0 +1,114 @@
+specVersion: 0.0.4
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: kek
+    network: base
+    source:
+      address: "0x3D57A1a3429825C35B7C432F8885fA1D0Eede460"
+      abi: Contract
+      startBlock: 14715100
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnBase
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnBase
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: alpha
+    network: base
+    source:
+      address: "0xc87653358D5EDc7716057c865b8cD9ac5eB44A16"
+      abi: Contract
+      startBlock: 14715000
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnBase
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnBase
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: fomo
+    network: base
+    source:
+      address: "0x321fCfC2cc0d45d2eb252A11bBA8274543819feB"
+      abi: Contract
+      startBlock: 14714800
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnBase
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnBase
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: fud
+    network: base
+    source:
+      address: "0xBdc2420b1E7F1f97d45b55a2ea9d3b4eB2675B75"
+      abi: Contract
+      startBlock: 14673100
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnBase
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnBase
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: gltr
+    network: base
+    source:
+      address: "0x8B2D15F61B99De5Fd53dfCFFf8AF995f17f9536d"
+      abi: Contract
+      startBlock: 14715200
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnBase
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnBase
+      file: ./src/mapping.ts
