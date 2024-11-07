@@ -20,9 +20,9 @@ dataSources:
           file: ./abis/Contract.json
       eventHandlers:
         - event: BridgingTokens(address,address,address,uint256,bytes32)
-          handler: handleBridgingTokensOnBase
+          handler: handleBridgingTokensOnGeist
         - event: TokensBridged(address,address,uint256,bytes32)
-          handler: handleTokensBridgedOnBase
+          handler: handleTokensBridgedOnGeist
       file: ./src/mapping.ts
   - kind: ethereum/contract
     name: usdc
