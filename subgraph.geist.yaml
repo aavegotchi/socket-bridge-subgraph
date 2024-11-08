@@ -28,7 +28,7 @@ dataSources:
     name: usdc
     network: geist-mainnet
     source:
-      address: "0xCFa0bC1ED6135166e9163211b4Ca566a0EE81e35"
+      address: "0xfa17Cc60d20E973E6EC1731C9544B285F779fEb9"
       abi: Contract
       startBlock: 0
     mapping:
