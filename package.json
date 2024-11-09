@@ -6,9 +6,11 @@
     "codegen": "graph codegen",
     "build": "graph build",
     "codegen:base": "graph codegen subgraph.base.yaml",
-    "codegen:geist": "graph codegen subgraph.base.yaml",
+    "codegen:geist": "graph codegen subgraph.geist.yaml",
+    "codegen:matic": "graph codegen subgraph.matic.yaml",
     "build:base": "graph build subgraph.base.yaml",
-    "build:geist": "graph build subgraph.geist.yaml"
+    "build:geist": "graph build subgraph.geist.yaml",
+    "build:matic": "graph build subgraph.matic.yaml"
   },
   "keywords": [],
   "author": "orionstardust",
