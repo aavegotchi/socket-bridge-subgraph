@@ -1,10 +1,10 @@
-name: Deploy to Satsuma Service - Polygon
+name: Deploy to Satsuma Service - Matic
 
 on:
   push:
     tags:
       - "prod-*"
-      - "polygon-*"
+      - "matic-*"
 
 jobs:
   buildAndDeploy:
@@ -25,9 +25,10 @@ jobs:
         run: yarn build
       - name: Deploy to Satsuma
         run: |
-          npx graph deploy socket-bridge \
+          npx graph deploy socket-bridge-matic \
             --deploy-key ${{secrets.SATSUMA_ACCESS_TOKEN}} \
             --node https://subgraphs.alchemy.com/api/subgraphs/deploy \
             --ipfs https://ipfs.satsuma.xyz \
-            --version-label ${GITHUB_REF#refs/*/}
+            --version-label ${GITHUB_REF#refs/*/} \
+            subgraph.matic.yaml
         shell: bash
