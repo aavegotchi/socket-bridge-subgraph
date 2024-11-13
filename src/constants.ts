@@ -103,6 +103,41 @@ export function polygonBridgeAddresses(): Array<TypedMap<string, string>> {
   return polygonBridgeAddresses;
 }
 
+export function polygonAmoyBridgeAddresses(): Array<TypedMap<string, string>> {
+  let polygonAmoyBridgeAddresses: Array<TypedMap<string, string>> = new Array<
+    TypedMap<string, string>
+  >();
+
+  let ghstAddressParams: TypedMap<string, string> = new TypedMap<
+    string,
+    string
+  >();
+  ghstAddressParams.set("Symbol", "GHST");
+  ghstAddressParams.set(
+    "NonMintableToken",
+    "0xF679b8D109b2d23931237Ce948a7D784727c0897"
+  );
+  ghstAddressParams.set("Vault", "0x3aa86893F04dd7fbaa63Dacc8E6bd887521E3BaE");
+  ghstAddressParams.set("Type", "ERC20");
+
+  let usdcAddressParams: TypedMap<string, string> = new TypedMap<
+    string,
+    string
+  >();
+  usdcAddressParams.set("Symbol", "USDC");
+  usdcAddressParams.set(
+    "NonMintableToken",
+    "0x41e94eb019c0762f9bfcf9fb1e58725bfb0e7582"
+  );
+  usdcAddressParams.set("Vault", "0x89165bCD984995FA5e5E0C23B1460bdc6102701B");
+  usdcAddressParams.set("Type", "ERC20");
+
+  polygonAmoyBridgeAddresses.push(ghstAddressParams);
+  polygonAmoyBridgeAddresses.push(usdcAddressParams);
+
+  return polygonAmoyBridgeAddresses;
+}
+
 export function baseBridgeAddresses(): Array<TypedMap<string, string>> {
   let baseBridgeAddresses: Array<TypedMap<string, string>> = new Array<
     TypedMap<string, string>
@@ -232,3 +267,144 @@ export function geistBridgeAddresses(): Array<TypedMap<string, string>> {
 
   return geistBridgeAddresses;
 }
+
+export function polterBridgeAddresses(): Array<TypedMap<string, string>> {
+  let polterBridgeAddresses: Array<TypedMap<string, string>> = new Array<
+    TypedMap<string, string>
+  >();
+
+  let ghstAddressParams: TypedMap<string, string> = new TypedMap<
+    string,
+    string
+  >();
+  ghstAddressParams.set("Symbol", "GHST");
+  ghstAddressParams.set(
+    "SuperToken",
+    "0xCef3AdFaE288d3304e42582a0786e0276181Acf2"
+  );
+  ghstAddressParams.set(
+    "Controller",
+    "0x49017f31dB018eAD84E67A382B5f3f796695aAc3"
+  );
+  ghstAddressParams.set("Type", "ERC20");
+
+  let usdcAddressParams: TypedMap<string, string> = new TypedMap<
+    string,
+    string
+  >();
+  usdcAddressParams.set("Symbol", "USDC");
+  usdcAddressParams.set(
+    "SuperToken",
+    "0x6cF5c0342c98E9D344aFd44A8AE399DbF4E018fC"
+  );
+  usdcAddressParams.set(
+    "Controller",
+    "0x0c8a0818B0816fB5E41073f8715Bae058E5e6C07"
+  );
+  usdcAddressParams.set("Type", "ERC20");
+
+  polterBridgeAddresses.push(ghstAddressParams);
+  polterBridgeAddresses.push(usdcAddressParams);
+
+  return polterBridgeAddresses;
+}
+
+// export function baseSepoliaBridgeAddresses(): Array<TypedMap<string, string>> {
+//   let baseSepoliaBridgeAddresses: Array<TypedMap<string, string>> = new Array<
+//     TypedMap<string, string>
+//   >();
+
+//   // let fudAddressParams: TypedMap<string, string> = new TypedMap<
+//   //   string,
+//   //   string
+//   // >();
+//   // fudAddressParams.set("Symbol", "FUD");
+//   // fudAddressParams.set(
+//   //   "NonMintableToken",
+//   //   "0x403e967b044d4be25170310157cb1a4bf10bdd0f"
+//   // );
+//   // fudAddressParams.set("Vault", "0xBdc2420b1E7F1f97d45b55a2ea9d3b4eB2675B75");
+//   // fudAddressParams.set("Type", "ERC20");
+
+//   // let fomoAddressParams: TypedMap<string, string> = new TypedMap<
+//   //   string,
+//   //   string
+//   // >();
+//   // fomoAddressParams.set("Symbol", "FOMO");
+//   // fomoAddressParams.set(
+//   //   "NonMintableToken",
+//   //   "0x44A6e0BE76e1D9620A7F76588e4509fE4fa8E8C8"
+//   // );
+//   // fomoAddressParams.set("Vault", "0x321fCfC2cc0d45d2eb252A11bBA8274543819feB");
+//   // fomoAddressParams.set("Type", "ERC20");
+
+//   // let alphaAddressParams: TypedMap<string, string> = new TypedMap<
+//   //   string,
+//   //   string
+//   // >();
+//   // alphaAddressParams.set("Symbol", "ALPHA");
+//   // alphaAddressParams.set(
+//   //   "NonMintableToken",
+//   //   "0x6a3E7C3c6EF65Ee26975b12293cA1AAD7e1dAeD2"
+//   // );
+//   // alphaAddressParams.set("Vault", "0xc87653358D5EDc7716057c865b8cD9ac5eB44A16");
+//   // alphaAddressParams.set("Type", "ERC20");
+
+//   // let kekAddressParams: TypedMap<string, string> = new TypedMap<
+//   //   string,
+//   //   string
+//   // >();
+//   // kekAddressParams.set("Symbol", "KEK");
+//   // kekAddressParams.set(
+//   //   "NonMintableToken",
+//   //   "0x42E5E06EF5b90Fe15F853F59299Fc96259209c5C"
+//   // );
+//   // kekAddressParams.set("Vault", "0x3D57A1a3429825C35B7C432F8885fA1D0Eede460");
+//   // kekAddressParams.set("Type", "ERC20");
+
+//   // let gltrAddressParams: TypedMap<string, string> = new TypedMap<
+//   //   string,
+//   //   string
+//   // >();
+//   // gltrAddressParams.set("Symbol", "GLTR");
+//   // gltrAddressParams.set(
+//   //   "NonMintableToken",
+//   //   "0x3801C3B3B5c98F88a9c9005966AA96aa440B9Afc"
+//   // );
+//   // gltrAddressParams.set("Vault", "0x8B2D15F61B99De5Fd53dfCFFf8AF995f17f9536d");
+//   // gltrAddressParams.set("Type", "ERC20");
+
+//   let ghstAddressParams: TypedMap<string, string> = new TypedMap<
+//     string,
+//     string
+//   >();
+//   ghstAddressParams.set("Symbol", "GHST");
+//   ghstAddressParams.set(
+//     "NonMintableToken",
+//     "0x385eeac5cb85a38a9a07a70c73e0a3271cfb54a7"
+//   );
+//   ghstAddressParams.set("Vault", "0x2a9e7A2A9FeD4A83F59125cFf72761E467cEa419");
+//   ghstAddressParams.set("Type", "ERC20");
+
+//   let usdcAddressParams: TypedMap<string, string> = new TypedMap<
+//     string,
+//     string
+//   >();
+//   usdcAddressParams.set("Symbol", "USDC");
+//   usdcAddressParams.set(
+//     "NonMintableToken",
+//     "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+//   );
+//   usdcAddressParams.set("Vault", "0x2CFFb0B0361838A9889Db3F5Ac7984B23D4988E9");
+//   usdcAddressParams.set("Type", "ERC20");
+
+//   baseSepoliaBridgeAddresses.push(fudAddressParams);
+//   baseSepoliaBridgeAddresses.push(fomoAddressParams);
+//   baseSepoliaBridgeAddresses.push(alphaAddressParams);
+//   baseSepoliaBridgeAddresses.push(kekAddressParams);
+//   baseSepoliaBridgeAddresses.push(gltrAddressParams);
+//   baseSepoliaBridgeAddresses.push(ghstAddressParams);
+//   baseSepoliaBridgeAddresses.push(usdcAddressParams);
+
+//   return baseSepoliaBridgeAddresses;
+// }
