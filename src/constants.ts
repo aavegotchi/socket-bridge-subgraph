@@ -3,7 +3,7 @@ import { TypedMap } from "@graphprotocol/graph-ts";
 export const TX_BRIDGING = "BRIDGING";
 export const TX_BRIDGED = "BRIDGED";
 
-enum Network {
+export enum Network {
   POLYGON = "polygon",
   POLYGON_AMOY = "polygonAmoy",
   BASE = "base",
@@ -220,29 +220,35 @@ function bridgeAddresses(network: Network): Array<TypedMap<string, string>> {
   return bridgeAddresses;
 }
 
-export function polygonBridgeAddresses(): Array<TypedMap<string, string>> {
-  return bridgeAddresses(Network.POLYGON);
+export function bridgeAddressesForNetwork(
+  network: Network
+): Array<TypedMap<string, string>> {
+  return bridgeAddresses(network);
 }
 
-export function polygonAmoyBridgeAddresses(): Array<TypedMap<string, string>> {
-  return bridgeAddresses(Network.POLYGON_AMOY);
-}
+// export function polygonBridgeAddresses(): Array<TypedMap<string, string>> {
+//   return bridgeAddresses(Network.POLYGON);
+// }
 
-export function baseBridgeAddresses(): Array<TypedMap<string, string>> {
-  return bridgeAddresses(Network.BASE);
-}
+// export function polygonAmoyBridgeAddresses(): Array<TypedMap<string, string>> {
+//   return bridgeAddresses(Network.POLYGON_AMOY);
+// }
 
-export function geistBridgeAddresses(): Array<TypedMap<string, string>> {
-  return bridgeAddresses(Network.GEIST);
-}
+// export function baseBridgeAddresses(): Array<TypedMap<string, string>> {
+//   return bridgeAddresses(Network.BASE);
+// }
 
-export function polterBridgeAddresses(): Array<TypedMap<string, string>> {
-  return bridgeAddresses(Network.POLTER);
-}
+// export function geistBridgeAddresses(): Array<TypedMap<string, string>> {
+//   return bridgeAddresses(Network.GEIST);
+// }
 
-export function baseSepoliaBridgeAddresses(): Array<TypedMap<string, string>> {
-  return bridgeAddresses(Network.BASE_SEPOLIA);
-}
+// export function polterBridgeAddresses(): Array<TypedMap<string, string>> {
+//   return bridgeAddresses(Network.POLTER);
+// }
+
+// export function baseSepoliaBridgeAddresses(): Array<TypedMap<string, string>> {
+//   return bridgeAddresses(Network.BASE_SEPOLIA);
+// }
 
 // export function baseSepoliaBridgeAddresses(): Array<TypedMap<string, string>> {
 //   let baseSepoliaBridgeAddresses: Array<TypedMap<string, string>> = new Array<
