@@ -1,4 +1,4 @@
-import { BridgingTokens, TokensBridged } from "../generated/kek/Contract";
+import { BridgingTokens, TokensBridged } from "../generated/ghst/Contract";
 import {
   BridgingTokens as BridgingNFTs,
   TokensBridged as NFTsBridged,
