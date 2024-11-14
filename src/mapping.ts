@@ -112,6 +112,7 @@ function handleBridgingNFTs(
   entity.timestamp = event.block.timestamp;
   entity.type = TX_BRIDGING;
   entity.tokenId = event.params.tokenId;
+  entity.blockNumber = event.block.number;
   entity.save();
 }
 
@@ -133,6 +134,7 @@ function handleNFTsBridged(
   entity.timestamp = event.block.timestamp;
   entity.type = TX_BRIDGED;
   entity.tokenId = event.params.tokenId;
+  entity.blockNumber = event.block.number;
   entity.save();
 }
 

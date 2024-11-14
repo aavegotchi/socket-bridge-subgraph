@@ -28,4 +28,5 @@ type BridgeTransfer @entity {
   timestamp: BigInt!
   txHash: Bytes!
   tokenId: BigInt # only for NFTs
+  blockNumber: BigInt!
 }
