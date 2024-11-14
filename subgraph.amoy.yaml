@@ -6,9 +6,9 @@ dataSources:
     name: ghst
     network: polygon-amoy
     source:
-      address: "0x8C1e6969Ca76Ca73a9B002fE8085F6A45B3679e5"
+      address: "0x3aa86893F04dd7fbaa63Dacc8E6bd887521E3BaE"
       abi: Contract
-      startBlock: 0
+      startBlock: 5978241
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -28,9 +28,120 @@ dataSources:
     name: usdc
     network: polygon-amoy
     source:
-      address: "0xfa17Cc60d20E973E6EC1731C9544B285F779fEb9"
+      address: "0x89165bCD984995FA5e5E0C23B1460bdc6102701B"
       abi: Contract
       startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnAmoy
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnAmoy
+      file: ./src/mapping.ts
+
+  - kind: ethereum/contract
+    name: fud
+    network: polygon-amoy
+    source:
+      address: "0x19dca6C3b028949c8929a3577fc450bF7FC253CA"
+      abi: Contract
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnAmoy
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnAmoy
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: fomo
+    network: polygon-amoy
+    source:
+      address: "0xF7339c32E3bD4d563E55dbC316aA3A09d17A87Da"
+      abi: Contract
+      startBlock: 5978241
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnAmoy
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnAmoy
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: alpha
+    network: polygon-amoy
+    source:
+      address: "0x94d55f5ef2d3eEac1B86541279f625d8032161D6"
+      abi: Contract
+      startBlock: 5978241
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnAmoy
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnAmoy
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: kek
+    network: polygon-amoy
+    source:
+      address: "0xc5782A8202A184De449672AAD40fb8555EC7B452"
+      abi: Contract
+      startBlock: 5978241
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnAmoy
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnAmoy
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: gltr
+    network: polygon-amoy
+    source:
+      address: "0x6f0747621A676C6938C3af246B57f63d78f59500"
+      abi: Contract
+      startBlock: 5978241
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
