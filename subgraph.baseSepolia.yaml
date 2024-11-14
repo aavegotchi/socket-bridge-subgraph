@@ -45,7 +45,7 @@ dataSources:
           handler: handleBridgingNFTsOnBaseSepolia
         - event: TokensBridged(address,address,uint256,uint256,bytes32)
           handler: handleNFTsBridgedOnBaseSepolia
-      file: ./src/mapping.ts
+      file: ./src/mapping_nft.ts
   - kind: ethereum/contract
     name: gotchi_item
     network: base-sepolia
@@ -67,4 +67,4 @@ dataSources:
           handler: handleBridgingNFTsOnBaseSepolia
         - event: TokensBridged(address,address,uint256,uint256,bytes32)
           handler: handleNFTsBridgedOnBaseSepolia
-      file: ./src/mapping.ts
+      file: ./src/mapping_nft.ts
