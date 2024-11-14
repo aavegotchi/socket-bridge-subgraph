@@ -22,6 +22,7 @@ export enum ChainId {
 
 const TOKEN_TYPE_NON_MINTABLE = "NonMintableToken";
 const TOKEN_TYPE_SUPER = "SuperToken";
+const TOKEN_TYPE_MINTABLE = "MintableToken";
 const CONTROLLER_TYPE_VAULT = "Vault";
 const CONTROLLER_TYPE_CONTROLLER = "Controller";
 const TOKEN_TYPE_ERC721 = "ERC721";
@@ -311,6 +312,24 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
         tokenType: TOKEN_TYPE_SUPER,
         controllerType: CONTROLLER_TYPE_CONTROLLER,
       },
+      {
+        symbol: TOKEN_SYMBOL_GOTCHI,
+        address: "0x1F0eb9099b9c398323dcf2F133dFdAD9dE7cF994",
+        type: TOKEN_TYPE_ERC721,
+        controller: "0x5ABB7E28160f82A84e389aDcc9d8CE3F7a0C8D92",
+        vault: null,
+        tokenType: TOKEN_TYPE_MINTABLE,
+        controllerType: CONTROLLER_TYPE_CONTROLLER,
+      },
+      {
+        symbol: TOKEN_SYMBOL_GOTCHI_ITEM,
+        address: "0xC3c2e1Cf099Bc6e1fA94ce358562BCbD5cc59FE5", //THIS WILL CHANGE IN PROD
+        type: TOKEN_TYPE_ERC1155,
+        controller: "0x10Cf0D5C1986a7Aa98aDb3bfa3529c1BBDa59FB9",
+        vault: null,
+        tokenType: TOKEN_TYPE_MINTABLE,
+        controllerType: CONTROLLER_TYPE_CONTROLLER,
+      },
     ];
   } else if (chainId === ChainId.BASE_SEPOLIA) {
     return [
@@ -325,7 +344,7 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
       },
       {
         symbol: TOKEN_SYMBOL_GOTCHI_ITEM,
-        address: "0xC3c2e1Cf099Bc6e1fA94ce358562BCbD5cc59FE5",
+        address: "0xC3c2e1Cf099Bc6e1fA94ce358562BCbD5cc59FE5", //THIS WILL CHANGE IN PROD
         type: TOKEN_TYPE_ERC1155,
         controller: null,
         vault: "0x130119B300049A80C20B2D3bfdFCfd021373E5e7",

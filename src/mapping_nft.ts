@@ -19,6 +19,20 @@ export function handleNFTsBridgedOnBaseSepolia(event: TokensBridged): void {
   }
 }
 
+export function handleBridgingNFTsOnPolter(event: BridgingTokens): void {
+  let tokenContract = findTokenForChain(event.address, ChainId.POLTER);
+  if (tokenContract) {
+    handleBridgingNFTs(event, tokenContract);
+  }
+}
+
+export function handleNFTsBridgedOnPolter(event: TokensBridged): void {
+  let tokenContract = findTokenForChain(event.address, ChainId.POLTER);
+  if (tokenContract) {
+    handleNFTsBridged(event, tokenContract);
+  }
+}
+
 function handleBridgingNFTs(
   event: BridgingTokens,
   tokenContract: TokenContract

@@ -156,3 +156,47 @@ dataSources:
         - event: TokensBridged(address,address,uint256,bytes32)
           handler: handleTokensBridgedOnPolter
       file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: gotchi
+    network: geist-polter
+    source:
+      address: "0x5ABB7E28160f82A84e389aDcc9d8CE3F7a0C8D92"
+      abi: NFTContract
+      startBlock: 10015
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: NFTContract
+          file: ./abis/NFTContract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingNFTsOnPolter
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleNFTsBridgedOnPolter
+      file: ./src/mapping_nft.ts
+  - kind: ethereum/contract
+    name: gotchi
+    network: geist-polter
+    source:
+      address: "0x10Cf0D5C1986a7Aa98aDb3bfa3529c1BBDa59FB9"
+      abi: NFTContract
+      startBlock: 10015
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: NFTContract
+          file: ./abis/NFTContract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingNFTsOnPolter
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleNFTsBridgedOnPolter
+      file: ./src/mapping_nft.ts
