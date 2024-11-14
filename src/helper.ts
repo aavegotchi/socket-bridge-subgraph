@@ -1,6 +1,6 @@
 import { Address } from "@graphprotocol/graph-ts";
 import { BridgeTransfer, TokenContract } from "../generated/schema";
-import { bridgeAddressesForNetwork, Network } from "./constants";
+import { ChainId, getTokensForNetwork } from "./constants";
 
 export function fetchToken(address: Address): TokenContract {
   let contract = TokenContract.load(address);
@@ -22,22 +22,21 @@ export function getOrCreateBridgeTransfer(id: string): BridgeTransfer {
 
 export function findTokenForChain(
   vault: Address | null,
-  network: Network
+  network: ChainId
 ): TokenContract | null {
-  const bridgeAddresses = bridgeAddressesForNetwork(network);
-  if (vault) {
-    for (let i = 0; i < bridgeAddresses.length; i++) {
-      const addressParams = bridgeAddresses[i];
+  const tokens = getTokensForNetwork(network);
 
-      //Varies depending on whether this is a parent or child chain
-      const vaultAddress =
-        addressParams.get("Controller") || addressParams.get("Vault");
-      const symbol = addressParams.get("Symbol");
-      const tokenType = addressParams.get("Type");
-      const tokenAddress =
-        addressParams.get("SuperToken") ||
-        addressParams.get("MintableToken") ||
-        addressParams.get("NonMintableToken");
+  if (vault && tokens) {
+    for (let i = 0; i < tokens.length; i++) {
+      const token = tokens[i];
+
+      let vaultAddress = token.vault || token.controller;
+
+      const symbol = token.symbol;
+      const tokenType = token.type;
+
+      let tokenAddress = token.address;
+
       if (
         vaultAddress &&
         vault.equals(Address.fromString(vaultAddress)) &&
@@ -55,52 +54,3 @@ export function findTokenForChain(
   }
   return null;
 }
-
-// export function findPolygonToken(vault: Address | null): TokenContract | null {
-//   return findTokenForNetwork(vault, Network.POLYGON);
-// }
-
-// export function findPolygonAmoyToken(
-//   vault: Address | null
-// ): TokenContract | null {
-//   return findTokenForNetwork(vault, Network.POLYGON_AMOY);
-// }
-
-// export function findBaseToken(vault: Address | null): TokenContract | null {
-//   return findTokenForNetwork(vault, Network.BASE);
-// }
-
-// export function findBaseSepoliaToken(vault: Address | null): TokenContract | null {
-//   const bridgeAddresses = baseSepoliaBridgeAddresses();
-//   if (vault) {
-//     for (let i = 0; i < bridgeAddresses.length; i++) {
-//       const addressParams = bridgeAddresses[i];
-//       const vaultAddress = addressParams.get("Controller");
-//       const symbol = addressParams.get("Symbol");
-//       const tokenType = addressParams.get("Type");
-//       const tokenAddress = addressParams.get("SuperToken");
-//       if (
-//         vaultAddress &&
-//         vault.equals(Address.fromString(vaultAddress)) &&
-//         tokenAddress &&
-//         symbol &&
-//         tokenType
-//       ) {
-//         const tokenContract = fetchToken(Address.fromString(tokenAddress));
-//         tokenContract.symbol = symbol;
-//         tokenContract.type = tokenType;
-//         tokenContract.save();
-//         return tokenContract;
-//       }
-//     }
-//   }
-//   return null;
-// }
-
-// export function findGeistToken(vault: Address | null): TokenContract | null {
-//   return findTokenForNetwork(vault, Network.GEIST);
-// }
-
-// export function findPolterToken(vault: Address | null): TokenContract | null {
-//   return findTokenForNetwork(vault, Network.POLTER);
-// }

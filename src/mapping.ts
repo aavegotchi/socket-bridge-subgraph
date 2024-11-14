@@ -1,59 +1,59 @@
 import { BridgingTokens, TokensBridged } from "../generated/kek/Contract";
 import { TokenContract } from "../generated/schema";
-import { Network, TX_BRIDGED, TX_BRIDGING } from "./constants";
+import { ChainId, TX_BRIDGED, TX_BRIDGING } from "./constants";
 import { findTokenForChain, getOrCreateBridgeTransfer } from "./helper";
 
 export function handleBridgingTokensOnPolygon(event: BridgingTokens): void {
-  let tokenContract = findTokenForChain(event.address, Network.POLYGON);
+  let tokenContract = findTokenForChain(event.address, ChainId.POLYGON);
   if (tokenContract) {
     handleBridgingTokens(event, tokenContract);
   }
 }
 
 export function handleTokensBridgedOnPolygon(event: TokensBridged): void {
-  let tokenContract = findTokenForChain(event.address, Network.POLYGON);
+  let tokenContract = findTokenForChain(event.address, ChainId.POLYGON);
   if (tokenContract) {
     handleTokensBridged(event, tokenContract);
   }
 }
 
 export function handleBridgingTokensOnBase(event: BridgingTokens): void {
-  let tokenContract = findTokenForChain(event.address, Network.BASE);
+  let tokenContract = findTokenForChain(event.address, ChainId.BASE);
   if (tokenContract) {
     handleBridgingTokens(event, tokenContract);
   }
 }
 
 export function handleTokensBridgedOnBase(event: TokensBridged): void {
-  let tokenContract = findTokenForChain(event.address, Network.BASE);
+  let tokenContract = findTokenForChain(event.address, ChainId.BASE);
   if (tokenContract) {
     handleTokensBridged(event, tokenContract);
   }
 }
 
 export function handleBridgingTokensOnGeist(event: BridgingTokens): void {
-  let tokenContract = findTokenForChain(event.address, Network.GEIST);
+  let tokenContract = findTokenForChain(event.address, ChainId.GEIST);
   if (tokenContract) {
     handleBridgingTokens(event, tokenContract);
   }
 }
 
 export function handleTokensBridgedOnGeist(event: TokensBridged): void {
-  let tokenContract = findTokenForChain(event.address, Network.GEIST);
+  let tokenContract = findTokenForChain(event.address, ChainId.GEIST);
   if (tokenContract) {
     handleTokensBridged(event, tokenContract);
   }
 }
 
 export function handleBridgingTokensOnPolter(event: BridgingTokens): void {
-  let tokenContract = findTokenForChain(event.address, Network.POLTER);
+  let tokenContract = findTokenForChain(event.address, ChainId.POLTER);
   if (tokenContract) {
     handleBridgingTokens(event, tokenContract);
   }
 }
 
 export function handleTokensBridgedOnPolter(event: TokensBridged): void {
-  let tokenContract = findTokenForChain(event.address, Network.POLTER);
+  let tokenContract = findTokenForChain(event.address, ChainId.POLTER);
   if (tokenContract) {
     handleTokensBridged(event, tokenContract);
   }
