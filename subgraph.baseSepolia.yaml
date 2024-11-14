@@ -4,9 +4,9 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: ghst
-    network: polygon-amoy
+    network: base-sepolia
     source:
-      address: "0x8C1e6969Ca76Ca73a9B002fE8085F6A45B3679e5"
+      address: "0xe97f36a00058aa7dfc4e85d23532c3f70453a7ae"
       abi: Contract
       startBlock: 0
     mapping:
@@ -20,16 +20,16 @@ dataSources:
           file: ./abis/Contract.json
       eventHandlers:
         - event: BridgingTokens(address,address,address,uint256,bytes32)
-          handler: handleBridgingTokensOnAmoy
+          handler: handleBridgingTokensOnBaseSepolia
         - event: TokensBridged(address,address,uint256,bytes32)
-          handler: handleTokensBridgedOnAmoy
+          handler: handleTokensBridgedOnBaseSepolia
       file: ./src/mapping.ts
   - kind: ethereum/contract
-    name: usdc
-    network: polygon-amoy
+    name: gotchi
+    network: base-sepolia
     source:
-      address: "0xfa17Cc60d20E973E6EC1731C9544B285F779fEb9"
-      abi: Contract
+      address: "0x87C969d083189927049f8fF3747703FB9f7a8AEd"
+      abi: NFTContract
       startBlock: 0
     mapping:
       kind: ethereum/events
@@ -38,11 +38,11 @@ dataSources:
       entities:
         - BridgeTransfer
       abis:
-        - name: Contract
-          file: ./abis/Contract.json
+        - name: NFTContract
+          file: ./abis/NFTContract.json
       eventHandlers:
-        - event: BridgingTokens(address,address,address,uint256,bytes32)
-          handler: handleBridgingTokensOnAmoy
-        - event: TokensBridged(address,address,uint256,bytes32)
-          handler: handleTokensBridgedOnAmoy
+        - event: BridgingTokens(address,address,address,uint256,uint256,bytes32)
+          handler: handleBridgingNFTsOnBaseSepolia
+        - event: TokensBridged(address,address,uint256,uint256,bytes32)
+          handler: handleNFTsBridgedOnBaseSepolia
       file: ./src/mapping.ts
