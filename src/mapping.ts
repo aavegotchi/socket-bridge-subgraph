@@ -17,6 +17,20 @@ export function handleTokensBridgedOnPolygon(event: TokensBridged): void {
   }
 }
 
+export function handleBridgingTokensOnAmoy(event: BridgingTokens): void {
+  let tokenContract = findTokenForChain(event.address, ChainId.POLYGON_AMOY);
+  if (tokenContract) {
+    handleBridgingTokens(event, tokenContract);
+  }
+}
+
+export function handleTokensBridgedOnAmoy(event: TokensBridged): void {
+  let tokenContract = findTokenForChain(event.address, ChainId.POLYGON_AMOY);
+  if (tokenContract) {
+    handleTokensBridged(event, tokenContract);
+  }
+}
+
 export function handleBridgingTokensOnBase(event: BridgingTokens): void {
   let tokenContract = findTokenForChain(event.address, ChainId.BASE);
   if (tokenContract) {
