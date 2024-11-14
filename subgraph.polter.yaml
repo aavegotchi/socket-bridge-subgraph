@@ -173,13 +173,13 @@ dataSources:
         - name: NFTContract
           file: ./abis/NFTContract.json
       eventHandlers:
-        - event: BridgingTokens(address,address,address,uint256,bytes32)
+        - event: BridgingTokens(address,address,address,uint256,uint256,bytes32)
           handler: handleBridgingNFTsOnPolter
-        - event: TokensBridged(address,address,uint256,bytes32)
+        - event: TokensBridged(address,address,uint256,uint256,bytes32)
           handler: handleNFTsBridgedOnPolter
       file: ./src/mapping_nft.ts
   - kind: ethereum/contract
-    name: gotchi
+    name: gotchi_item
     network: geist-polter
     source:
       address: "0x10Cf0D5C1986a7Aa98aDb3bfa3529c1BBDa59FB9"
@@ -195,8 +195,8 @@ dataSources:
         - name: NFTContract
           file: ./abis/NFTContract.json
       eventHandlers:
-        - event: BridgingTokens(address,address,address,uint256,bytes32)
+        - event: BridgingTokens(address,address,address,uint256,uint256,bytes32)
           handler: handleBridgingNFTsOnPolter
-        - event: TokensBridged(address,address,uint256,bytes32)
+        - event: TokensBridged(address,address,uint256,uint256,bytes32)
           handler: handleNFTsBridgedOnPolter
       file: ./src/mapping_nft.ts
