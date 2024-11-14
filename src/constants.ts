@@ -234,7 +234,7 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
       },
       {
         symbol: TOKEN_SYMBOL_GOTCHI_ITEM,
-        address: "0x87C969d083189927049f8fF3747703FB9f7a8AEd",
+        address: "0xC3c2e1Cf099Bc6e1fA94ce358562BCbD5cc59FE5",
         type: TOKEN_TYPE_ERC1155,
         controller: null,
         vault: "0x130119B300049A80C20B2D3bfdFCfd021373E5e7",
