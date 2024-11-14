@@ -46,3 +46,25 @@ dataSources:
         - event: TokensBridged(address,address,uint256,uint256,bytes32)
           handler: handleNFTsBridgedOnBaseSepolia
       file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: gotchi_item
+    network: base-sepolia
+    source:
+      address: "0x130119B300049A80C20B2D3bfdFCfd021373E5e7"
+      abi: NFTContract
+      startBlock: 16665803
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: NFTContract
+          file: ./abis/NFTContract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,uint256,bytes32)
+          handler: handleBridgingNFTsOnBaseSepolia
+        - event: TokensBridged(address,address,uint256,uint256,bytes32)
+          handler: handleNFTsBridgedOnBaseSepolia
+      file: ./src/mapping.ts
