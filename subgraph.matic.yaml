@@ -2,6 +2,7 @@ specVersion: 0.0.4
 schema:
   file: schema.graphql
 dataSources:
+  # Alchemica from matic to Base
   - kind: ethereum/contract
     name: kek
     network: matic
@@ -112,6 +113,118 @@ dataSources:
         - event: TokensBridged(address,address,uint256,bytes32)
           handler: handleTokensBridgedOnPolygon
       file: ./src/mapping.ts
+  # Alchemica from matic to Geist
+  - kind: ethereum/contract
+    name: kek
+    network: matic
+    source:
+      address: "0xbc48A7882955592D9bf4035E3eFa35ED40672d9B"
+      abi: Contract
+      startBlock: 57189000
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnPolygon
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnPolygon
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: alpha
+    network: matic
+    source:
+      address: "0xA82947990B9622de613456d45C52bA99Ae0B047f"
+      abi: Contract
+      startBlock: 57188900
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnPolygon
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnPolygon
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: fomo
+    network: matic
+    source:
+      address: "0x1cF8dc59A72a81d5D9D1e6BDa3FBC1657b0714aE"
+      abi: Contract
+      startBlock: 57188700
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnPolygon
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnPolygon
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: fud
+    network: matic
+    source:
+      address: "0xE24298D0059a68Ab8d59dBC75985A64d095bbACD"
+      abi: Contract
+      startBlock: 57152000
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnPolygon
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnPolygon
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: gltr
+    network: matic
+    source:
+      address: "0xA5562dA24474B61a2a3bC8B5544f550Cdf920289"
+      abi: Contract
+      startBlock: 57189000
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnPolygon
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnPolygon
+      file: ./src/mapping.ts
+  # GHST and USDC from matic to Geist
   - kind: ethereum/contract
     name: usdc
     network: matic

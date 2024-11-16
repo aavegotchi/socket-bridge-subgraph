@@ -3,8 +3,6 @@ import { TokenContract } from "../generated/schema";
 import { ChainId, TX_BRIDGED, TX_BRIDGING } from "./constants";
 import { findTokenForChain, getOrCreateBridgeTransfer } from "./helper";
 
-//NFTs
-
 export function handleBridgingNFTsOnBaseSepolia(event: BridgingTokens): void {
   let tokenContract = findTokenForChain(event.address, ChainId.BASE_SEPOLIA);
   if (tokenContract) {
@@ -27,6 +25,34 @@ export function handleBridgingNFTsOnPolter(event: BridgingTokens): void {
 }
 
 export function handleNFTsBridgedOnPolter(event: TokensBridged): void {
+  let tokenContract = findTokenForChain(event.address, ChainId.POLTER);
+  if (tokenContract) {
+    handleNFTsBridged(event, tokenContract);
+  }
+}
+
+export function handleBridgingNFTsOnPolygon(event: BridgingTokens): void {
+  let tokenContract = findTokenForChain(event.address, ChainId.POLTER);
+  if (tokenContract) {
+    handleBridgingNFTs(event, tokenContract);
+  }
+}
+
+export function handleNFTsBridgedOnPolygon(event: TokensBridged): void {
+  let tokenContract = findTokenForChain(event.address, ChainId.POLTER);
+  if (tokenContract) {
+    handleNFTsBridged(event, tokenContract);
+  }
+}
+
+export function handleBridgingNFTsOnGeist(event: BridgingTokens): void {
+  let tokenContract = findTokenForChain(event.address, ChainId.POLTER);
+  if (tokenContract) {
+    handleBridgingNFTs(event, tokenContract);
+  }
+}
+
+export function handleNFTsBridgedOnGeist(event: TokensBridged): void {
   let tokenContract = findTokenForChain(event.address, ChainId.POLTER);
   if (tokenContract) {
     handleNFTsBridged(event, tokenContract);
