@@ -4,7 +4,7 @@ schema:
 dataSources:
   # Alchemica from matic to Base
   - kind: ethereum/contract
-    name: kek
+    name: kek_base
     network: matic
     source:
       address: "0x3D57A1a3429825C35B7C432F8885fA1D0Eede460"
@@ -26,7 +26,7 @@ dataSources:
           handler: handleTokensBridgedOnPolygon
       file: ./src/mapping.ts
   - kind: ethereum/contract
-    name: alpha
+    name: alpha_base
     network: matic
     source:
       address: "0xc87653358D5EDc7716057c865b8cD9ac5eB44A16"
@@ -48,7 +48,7 @@ dataSources:
           handler: handleTokensBridgedOnPolygon
       file: ./src/mapping.ts
   - kind: ethereum/contract
-    name: fomo
+    name: fomo_base
     network: matic
     source:
       address: "0x321fCfC2cc0d45d2eb252A11bBA8274543819feB"
@@ -70,7 +70,7 @@ dataSources:
           handler: handleTokensBridgedOnPolygon
       file: ./src/mapping.ts
   - kind: ethereum/contract
-    name: fud
+    name: fud_base
     network: matic
     source:
       address: "0xBdc2420b1E7F1f97d45b55a2ea9d3b4eB2675B75"
@@ -92,7 +92,7 @@ dataSources:
           handler: handleTokensBridgedOnPolygon
       file: ./src/mapping.ts
   - kind: ethereum/contract
-    name: gltr
+    name: gltr_base
     network: matic
     source:
       address: "0x8B2D15F61B99De5Fd53dfCFFf8AF995f17f9536d"
@@ -115,7 +115,7 @@ dataSources:
       file: ./src/mapping.ts
   # Alchemica from matic to Geist
   - kind: ethereum/contract
-    name: kek
+    name: kek_geist
     network: matic
     source:
       address: "0xbc48A7882955592D9bf4035E3eFa35ED40672d9B"
@@ -137,7 +137,7 @@ dataSources:
           handler: handleTokensBridgedOnPolygon
       file: ./src/mapping.ts
   - kind: ethereum/contract
-    name: alpha
+    name: alpha_geist
     network: matic
     source:
       address: "0xA82947990B9622de613456d45C52bA99Ae0B047f"
@@ -159,7 +159,7 @@ dataSources:
           handler: handleTokensBridgedOnPolygon
       file: ./src/mapping.ts
   - kind: ethereum/contract
-    name: fomo
+    name: fomo_geist
     network: matic
     source:
       address: "0x1cF8dc59A72a81d5D9D1e6BDa3FBC1657b0714aE"
@@ -181,7 +181,7 @@ dataSources:
           handler: handleTokensBridgedOnPolygon
       file: ./src/mapping.ts
   - kind: ethereum/contract
-    name: fud
+    name: fud_geist
     network: matic
     source:
       address: "0xE24298D0059a68Ab8d59dBC75985A64d095bbACD"
@@ -203,7 +203,7 @@ dataSources:
           handler: handleTokensBridgedOnPolygon
       file: ./src/mapping.ts
   - kind: ethereum/contract
-    name: gltr
+    name: gltr_geist
     network: matic
     source:
       address: "0xA5562dA24474B61a2a3bC8B5544f550Cdf920289"
@@ -226,7 +226,7 @@ dataSources:
       file: ./src/mapping.ts
   # GHST and USDC from matic to Geist
   - kind: ethereum/contract
-    name: usdc
+    name: usdc_geist
     network: matic
     source:
       address: "0x2CFFb0B0361838A9889Db3F5Ac7984B23D4988E9"
@@ -248,7 +248,7 @@ dataSources:
           handler: handleTokensBridgedOnPolygon
       file: ./src/mapping.ts
   - kind: ethereum/contract
-    name: ghst
+    name: ghst_geist
     network: matic
     source:
       address: "0x2a9e7A2A9FeD4A83F59125cFf72761E467cEa419"
