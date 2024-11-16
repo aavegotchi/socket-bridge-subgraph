@@ -47,6 +47,7 @@ const TOKEN_SYMBOL_GOTCHI_ITEM = "GOTCHI_ITEM";
 export function getTokensForNetwork(chainId: ChainId): Token[] | null {
   if (chainId === ChainId.POLYGON) {
     return [
+      //Alchemica to Base
       {
         symbol: TOKEN_SYMBOL_FUD,
         address: "0x403e967b044d4be25170310157cb1a4bf10bdd0f",
@@ -92,6 +93,56 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
         tokenType: TOKEN_TYPE_NON_MINTABLE,
         controllerType: CONTROLLER_TYPE_VAULT,
       },
+
+      //Alchemica to Geist
+      {
+        symbol: TOKEN_SYMBOL_FUD,
+        address: "0x403e967b044d4be25170310157cb1a4bf10bdd0f",
+        type: TOKEN_TYPE_ERC20,
+        controller: null,
+        vault: "0xE24298D0059a68Ab8d59dBC75985A64d095bbACD",
+        tokenType: TOKEN_TYPE_NON_MINTABLE,
+        controllerType: CONTROLLER_TYPE_VAULT,
+      },
+      {
+        symbol: TOKEN_SYMBOL_FOMO,
+        address: "0x44A6e0BE76e1D9620A7F76588e4509fE4fa8E8C8",
+        type: TOKEN_TYPE_ERC20,
+        controller: null,
+        vault: "0x1cF8dc59A72a81d5D9D1e6BDa3FBC1657b0714aE",
+        tokenType: TOKEN_TYPE_NON_MINTABLE,
+        controllerType: CONTROLLER_TYPE_VAULT,
+      },
+      {
+        symbol: TOKEN_SYMBOL_ALPHA,
+        address: "0x6a3E7C3c6EF65Ee26975b12293cA1AAD7e1dAeD2",
+        type: TOKEN_TYPE_ERC20,
+        controller: null,
+        vault: "0xA82947990B9622de613456d45C52bA99Ae0B047f",
+        tokenType: TOKEN_TYPE_NON_MINTABLE,
+        controllerType: CONTROLLER_TYPE_VAULT,
+      },
+      {
+        symbol: TOKEN_SYMBOL_KEK,
+        address: "0x42E5E06EF5b90Fe15F853F59299Fc96259209c5C",
+        type: TOKEN_TYPE_ERC20,
+        controller: null,
+        vault: "0xbc48A7882955592D9bf4035E3eFa35ED40672d9B",
+        tokenType: TOKEN_TYPE_NON_MINTABLE,
+        controllerType: CONTROLLER_TYPE_VAULT,
+      },
+      {
+        symbol: TOKEN_SYMBOL_GLTR,
+        address: "0x3801C3B3B5c98F88a9c9005966AA96aa440B9Afc",
+        type: TOKEN_TYPE_ERC20,
+        controller: null,
+        vault: "0xA5562dA24474B61a2a3bC8B5544f550Cdf920289",
+        tokenType: TOKEN_TYPE_NON_MINTABLE,
+        controllerType: CONTROLLER_TYPE_VAULT,
+      },
+
+      //Matic to Geist
+
       {
         symbol: TOKEN_SYMBOL_GHST,
         address: "0x385eeac5cb85a38a9a07a70c73e0a3271cfb54a7",
