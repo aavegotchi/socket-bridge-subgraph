@@ -226,7 +226,7 @@ dataSources:
       file: ./src/mapping.ts
   # GHST and USDC from matic to Geist
   - kind: ethereum/contract
-    name: usdc_geist
+    name: usdc
     network: matic
     source:
       address: "0x2CFFb0B0361838A9889Db3F5Ac7984B23D4988E9"
@@ -248,7 +248,7 @@ dataSources:
           handler: handleTokensBridgedOnPolygon
       file: ./src/mapping.ts
   - kind: ethereum/contract
-    name: ghst_geist
+    name: ghst
     network: matic
     source:
       address: "0x2a9e7A2A9FeD4A83F59125cFf72761E467cEa419"
