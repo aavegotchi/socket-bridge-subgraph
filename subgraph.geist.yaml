@@ -46,3 +46,114 @@ dataSources:
         - event: TokensBridged(address,address,uint256,bytes32)
           handler: handleTokensBridgedOnGeist
       file: ./src/mapping.ts
+  #alchemica on Geist
+  - kind: ethereum/contract
+    name: fud
+    network: geist-mainnet
+    source:
+      address: "0xb09e9A82B558955B31F84489A46B791288896aBD"
+      abi: Contract
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnGeist
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnGeist
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: fomo
+    network: geist-mainnet
+    source:
+      address: "0x79E6aA4B2Ca1336b7CA8188B22E7259862A93A46"
+      abi: Contract
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnGeist
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnGeist
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: alpha
+    network: geist-mainnet
+    source:
+      address: "0x5311DA5389e729fE60FABb8FB3cA0847783Fb930"
+      abi: Contract
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnGeist
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnGeist
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: kek
+    network: geist-mainnet
+    source:
+      address: "0x7f7Ca5CB3a118801DBA5b9E4BCbC274E640625AD"
+      abi: Contract
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnGeist
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnGeist
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: gltr
+    network: geist-mainnet
+    source:
+      address: "0xb5e79F1fBeC25fcDA61A9Ad48D054A356469c586"
+      abi: Contract
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - BridgeTransfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: BridgingTokens(address,address,address,uint256,bytes32)
+          handler: handleBridgingTokensOnGeist
+        - event: TokensBridged(address,address,uint256,bytes32)
+          handler: handleTokensBridgedOnGeist
+      file: ./src/mapping.ts
