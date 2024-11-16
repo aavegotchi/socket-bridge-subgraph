@@ -92,7 +92,7 @@ function handleBridgingTokens(
   tokenContract: TokenContract
 ): void {
   const txHash = event.transaction.hash;
-  const id = txHash.toHex();
+  const id = event.params.messageId.toHexString();
 
   let entity = getOrCreateBridgeTransfer(id);
   entity.messageId = event.params.messageId;
@@ -114,7 +114,7 @@ function handleTokensBridged(
   tokenContract: TokenContract
 ): void {
   const txHash = event.transaction.hash;
-  const id = txHash.toHex();
+  const id = event.params.messageId.toHexString();
 
   let entity = getOrCreateBridgeTransfer(id);
   entity.messageId = event.params.messageId;
