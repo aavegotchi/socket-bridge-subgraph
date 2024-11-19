@@ -410,18 +410,18 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
       },
       {
         symbol: TOKEN_SYMBOL_GOTCHI,
-        address: "0x1F0eb9099b9c398323dcf2F133dFdAD9dE7cF994",
+        address: "0x60d629c876E455eFdca83e2b4c85DfB9d4C3C58C",
         type: TOKEN_TYPE_ERC721,
-        controller: "0x5ABB7E28160f82A84e389aDcc9d8CE3F7a0C8D92",
+        controller: "0x143B8D0e2b6d7791F571A68bf07da2253C0d52CB",
         vault: null,
         tokenType: TOKEN_TYPE_MINTABLE,
         controllerType: CONTROLLER_TYPE_CONTROLLER,
       },
       {
         symbol: TOKEN_SYMBOL_GOTCHI_ITEM,
-        address: "0xC3c2e1Cf099Bc6e1fA94ce358562BCbD5cc59FE5", //THIS WILL CHANGE IN PROD
+        address: "0x954B9F6DaB28F92c88192E2F52FDa5A6Df4A0334", //THIS WILL CHANGE IN PROD
         type: TOKEN_TYPE_ERC1155,
-        controller: "0x10Cf0D5C1986a7Aa98aDb3bfa3529c1BBDa59FB9",
+        controller: "0x60d629c876E455eFdca83e2b4c85DfB9d4C3C58C",
         vault: null,
         tokenType: TOKEN_TYPE_MINTABLE,
         controllerType: CONTROLLER_TYPE_CONTROLLER,

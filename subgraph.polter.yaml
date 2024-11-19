@@ -160,7 +160,7 @@ dataSources:
     name: gotchi
     network: geist-polter
     source:
-      address: "0x0E0476250D4D075BB4Aea83283d4699404A40360"
+      address: "0x143B8D0e2b6d7791F571A68bf07da2253C0d52CB"
       abi: NFTContract
       startBlock: 10015
     mapping:
@@ -182,7 +182,7 @@ dataSources:
     name: gotchi_item
     network: geist-polter
     source:
-      address: "0x10Cf0D5C1986a7Aa98aDb3bfa3529c1BBDa59FB9"
+      address: "0x60d629c876E455eFdca83e2b4c85DfB9d4C3C58C"
       abi: NFTContract
       startBlock: 10015
     mapping:
