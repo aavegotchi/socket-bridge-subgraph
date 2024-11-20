@@ -28,7 +28,7 @@ dataSources:
     name: gotchi
     network: base-sepolia
     source:
-      address: "0x110A646276961C2d8a54b951bbC8B169E0F573c4"
+      address: "0xEccF8B72c6A354532F27053e54A5b4b912D1e6D6"
       abi: NFTContract
       startBlock: 16665803
     mapping:
@@ -50,7 +50,7 @@ dataSources:
     name: gotchi_item
     network: base-sepolia
     source:
-      address: "0x130119B300049A80C20B2D3bfdFCfd021373E5e7"
+      address: "0x2709f098E8C641796B495bED28A34F9FEA858ac8"
       abi: NFTContract
       startBlock: 16665803
     mapping:

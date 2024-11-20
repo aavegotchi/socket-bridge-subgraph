@@ -434,7 +434,7 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
         address: "0x87C969d083189927049f8fF3747703FB9f7a8AEd",
         type: TOKEN_TYPE_ERC721,
         controller: null,
-        vault: "0x110A646276961C2d8a54b951bbC8B169E0F573c4",
+        vault: "0xEccF8B72c6A354532F27053e54A5b4b912D1e6D6",
         tokenType: TOKEN_TYPE_NON_MINTABLE,
         controllerType: CONTROLLER_TYPE_VAULT,
       },
@@ -443,7 +443,7 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
         address: "0xC3c2e1Cf099Bc6e1fA94ce358562BCbD5cc59FE5", //THIS WILL CHANGE IN PROD
         type: TOKEN_TYPE_ERC1155,
         controller: null,
-        vault: "0x130119B300049A80C20B2D3bfdFCfd021373E5e7",
+        vault: "0x2709f098E8C641796B495bED28A34F9FEA858ac8",
         tokenType: TOKEN_TYPE_NON_MINTABLE,
         controllerType: CONTROLLER_TYPE_VAULT,
       },
