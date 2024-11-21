@@ -36,7 +36,6 @@ const TOKEN_SYMBOL_ALPHA = "ALPHA";
 const TOKEN_SYMBOL_KEK = "KEK";
 const TOKEN_SYMBOL_GLTR = "GLTR";
 const TOKEN_SYMBOL_GHST = "GHST";
-const TOKEN_SYMBOL_USDC_OLD = "USDC_OLD";
 const TOKEN_SYMBOL_USDC = "USDC";
 
 //erc721
@@ -289,15 +288,7 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
         tokenType: TOKEN_TYPE_SUPER,
         controllerType: CONTROLLER_TYPE_CONTROLLER,
       },
-      {
-        symbol: TOKEN_SYMBOL_USDC_OLD,
-        address: "0xCFa0bC1ED6135166e9163211b4Ca566a0EE81e35",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0xfa17Cc60d20E973E6EC1731C9544B285F779fEb9",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
+
       {
         symbol: TOKEN_SYMBOL_USDC,
         address: "0xCFa0bC1ED6135166e9163211b4Ca566a0EE81e35",
