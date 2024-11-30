@@ -161,6 +161,24 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
         tokenType: TOKEN_TYPE_NON_MINTABLE,
         controllerType: CONTROLLER_TYPE_VAULT,
       },
+      {
+        symbol: TOKEN_SYMBOL_GOTCHI,
+        address: "0x86935F11C86623deC8a25696E1C19a8659CbF95d",
+        type: TOKEN_TYPE_ERC721,
+        controller: null,
+        vault: null,
+        tokenType: TOKEN_TYPE_NON_MINTABLE,
+        controllerType: CONTROLLER_TYPE_VAULT,
+      },
+      {
+        symbol: TOKEN_SYMBOL_GOTCHI_ITEM,
+        address: "0x58de9AaBCaeEC0f69883C94318810ad79Cc6a44f",
+        type: TOKEN_TYPE_ERC1155,
+        controller: null,
+        vault: null,
+        tokenType: TOKEN_TYPE_NON_MINTABLE,
+        controllerType: CONTROLLER_TYPE_VAULT,
+      },
     ];
   } else if (chainId === ChainId.POLYGON_AMOY) {
     return [
@@ -341,6 +359,26 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
         controller: "0xb5e79F1fBeC25fcDA61A9Ad48D054A356469c586",
         vault: null,
         tokenType: TOKEN_TYPE_SUPER,
+        controllerType: CONTROLLER_TYPE_CONTROLLER,
+      },
+
+      //Matic to Geist
+      {
+        symbol: TOKEN_SYMBOL_GOTCHI,
+        address: "0x6Acc828BbbC6874de40Ca20bfeA7Cd2a2DA8DA8c",
+        type: TOKEN_TYPE_ERC721,
+        controller: "0x5964823256B9C8aC7Ba7Dd94807FDF4DFf728215",
+        vault: null,
+        tokenType: TOKEN_TYPE_MINTABLE,
+        controllerType: CONTROLLER_TYPE_CONTROLLER,
+      },
+      {
+        symbol: TOKEN_SYMBOL_GOTCHI_ITEM,
+        address: "0xaC336aB3CFC58698B582205A861A5C6B798c01B9",
+        type: TOKEN_TYPE_ERC1155,
+        controller: "0x4924E6B720D7283bF2d90104A480a9CFadAb1b77",
+        vault: null,
+        tokenType: TOKEN_TYPE_MINTABLE,
         controllerType: CONTROLLER_TYPE_CONTROLLER,
       },
     ];
