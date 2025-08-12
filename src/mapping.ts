@@ -45,34 +45,6 @@ export function handleTokensBridgedOnBase(event: TokensBridged): void {
   }
 }
 
-export function handleBridgingTokensOnGeist(event: BridgingTokens): void {
-  let tokenContract = findTokenForChain(event.address, ChainId.GEIST);
-  if (tokenContract) {
-    handleBridgingTokens(event, tokenContract);
-  }
-}
-
-export function handleTokensBridgedOnGeist(event: TokensBridged): void {
-  let tokenContract = findTokenForChain(event.address, ChainId.GEIST);
-  if (tokenContract) {
-    handleTokensBridged(event, tokenContract);
-  }
-}
-
-export function handleBridgingTokensOnPolter(event: BridgingTokens): void {
-  let tokenContract = findTokenForChain(event.address, ChainId.POLTER);
-  if (tokenContract) {
-    handleBridgingTokens(event, tokenContract);
-  }
-}
-
-export function handleTokensBridgedOnPolter(event: TokensBridged): void {
-  let tokenContract = findTokenForChain(event.address, ChainId.POLTER);
-  if (tokenContract) {
-    handleTokensBridged(event, tokenContract);
-  }
-}
-
 export function handleBridgingTokensOnBaseSepolia(event: BridgingTokens): void {
   let tokenContract = findTokenForChain(event.address, ChainId.BASE_SEPOLIA);
   if (tokenContract) {

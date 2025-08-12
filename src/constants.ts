@@ -14,19 +14,14 @@ export class Token {
 export enum ChainId {
   POLYGON = 137,
   BASE = 8453,
-  GEIST = 63157,
-  POLTER = 631571,
   BASE_SEPOLIA = 845,
   POLYGON_AMOY = 80002,
 }
 
 const TOKEN_TYPE_NON_MINTABLE = "NonMintableToken";
 const TOKEN_TYPE_SUPER = "SuperToken";
-const TOKEN_TYPE_MINTABLE = "MintableToken";
 const CONTROLLER_TYPE_VAULT = "Vault";
 const CONTROLLER_TYPE_CONTROLLER = "Controller";
-const TOKEN_TYPE_ERC721 = "ERC721";
-const TOKEN_TYPE_ERC1155 = "ERC1155";
 const TOKEN_TYPE_ERC20 = "ERC20";
 
 //erc20
@@ -38,12 +33,6 @@ const TOKEN_SYMBOL_GLTR = "GLTR";
 const TOKEN_SYMBOL_GHST = "GHST";
 const TOKEN_SYMBOL_USDC = "USDC";
 
-//erc721
-const TOKEN_SYMBOL_GOTCHI = "GOTCHI";
-
-//erc1155
-const TOKEN_SYMBOL_GOTCHI_ITEM = "GOTCHI_ITEM";
-
 export function getTokensForNetwork(chainId: ChainId): Token[] | null {
   if (chainId === ChainId.POLYGON) {
     return [
@@ -53,7 +42,7 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
         address: "0x403e967b044d4be25170310157cb1a4bf10bdd0f",
         type: TOKEN_TYPE_ERC20,
         controller: null,
-        vault: "0xBdc2420b1E7F1f97d45b55a2ea9d3b4eB2675B75",
+        vault: "0x9eC95a86ACc3412d340211D77260aa14cE00b394",
         tokenType: TOKEN_TYPE_NON_MINTABLE,
         controllerType: CONTROLLER_TYPE_VAULT,
       },
@@ -62,7 +51,7 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
         address: "0x44A6e0BE76e1D9620A7F76588e4509fE4fa8E8C8",
         type: TOKEN_TYPE_ERC20,
         controller: null,
-        vault: "0x321fCfC2cc0d45d2eb252A11bBA8274543819feB",
+        vault: "0xeec6E2e315A4c2477d65dd3325f14D03408a2357",
         tokenType: TOKEN_TYPE_NON_MINTABLE,
         controllerType: CONTROLLER_TYPE_VAULT,
       },
@@ -71,7 +60,7 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
         address: "0x6a3E7C3c6EF65Ee26975b12293cA1AAD7e1dAeD2",
         type: TOKEN_TYPE_ERC20,
         controller: null,
-        vault: "0xc87653358D5EDc7716057c865b8cD9ac5eB44A16",
+        vault: "0x39392d61CD746869A1C87C06c22A9371C3C28825",
         tokenType: TOKEN_TYPE_NON_MINTABLE,
         controllerType: CONTROLLER_TYPE_VAULT,
       },
@@ -80,7 +69,7 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
         address: "0x42E5E06EF5b90Fe15F853F59299Fc96259209c5C",
         type: TOKEN_TYPE_ERC20,
         controller: null,
-        vault: "0x3D57A1a3429825C35B7C432F8885fA1D0Eede460",
+        vault: "0xBD638B054848409d1321070C22876cCE2c4b1608",
         tokenType: TOKEN_TYPE_NON_MINTABLE,
         controllerType: CONTROLLER_TYPE_VAULT,
       },
@@ -89,93 +78,7 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
         address: "0x3801C3B3B5c98F88a9c9005966AA96aa440B9Afc",
         type: TOKEN_TYPE_ERC20,
         controller: null,
-        vault: "0x8B2D15F61B99De5Fd53dfCFFf8AF995f17f9536d",
-        tokenType: TOKEN_TYPE_NON_MINTABLE,
-        controllerType: CONTROLLER_TYPE_VAULT,
-      },
-
-      //Alchemica to Geist
-      {
-        symbol: TOKEN_SYMBOL_FUD,
-        address: "0x403e967b044d4be25170310157cb1a4bf10bdd0f",
-        type: TOKEN_TYPE_ERC20,
-        controller: null,
-        vault: "0xE24298D0059a68Ab8d59dBC75985A64d095bbACD",
-        tokenType: TOKEN_TYPE_NON_MINTABLE,
-        controllerType: CONTROLLER_TYPE_VAULT,
-      },
-      {
-        symbol: TOKEN_SYMBOL_FOMO,
-        address: "0x44A6e0BE76e1D9620A7F76588e4509fE4fa8E8C8",
-        type: TOKEN_TYPE_ERC20,
-        controller: null,
-        vault: "0x1cF8dc59A72a81d5D9D1e6BDa3FBC1657b0714aE",
-        tokenType: TOKEN_TYPE_NON_MINTABLE,
-        controllerType: CONTROLLER_TYPE_VAULT,
-      },
-      {
-        symbol: TOKEN_SYMBOL_ALPHA,
-        address: "0x6a3E7C3c6EF65Ee26975b12293cA1AAD7e1dAeD2",
-        type: TOKEN_TYPE_ERC20,
-        controller: null,
-        vault: "0xA82947990B9622de613456d45C52bA99Ae0B047f",
-        tokenType: TOKEN_TYPE_NON_MINTABLE,
-        controllerType: CONTROLLER_TYPE_VAULT,
-      },
-      {
-        symbol: TOKEN_SYMBOL_KEK,
-        address: "0x42E5E06EF5b90Fe15F853F59299Fc96259209c5C",
-        type: TOKEN_TYPE_ERC20,
-        controller: null,
-        vault: "0xbc48A7882955592D9bf4035E3eFa35ED40672d9B",
-        tokenType: TOKEN_TYPE_NON_MINTABLE,
-        controllerType: CONTROLLER_TYPE_VAULT,
-      },
-      {
-        symbol: TOKEN_SYMBOL_GLTR,
-        address: "0x3801C3B3B5c98F88a9c9005966AA96aa440B9Afc",
-        type: TOKEN_TYPE_ERC20,
-        controller: null,
-        vault: "0xA5562dA24474B61a2a3bC8B5544f550Cdf920289",
-        tokenType: TOKEN_TYPE_NON_MINTABLE,
-        controllerType: CONTROLLER_TYPE_VAULT,
-      },
-
-      //Matic to Geist
-
-      {
-        symbol: TOKEN_SYMBOL_GHST,
-        address: "0x385eeac5cb85a38a9a07a70c73e0a3271cfb54a7",
-        type: TOKEN_TYPE_ERC20,
-        controller: null,
-        vault: "0x2a9e7A2A9FeD4A83F59125cFf72761E467cEa419",
-        tokenType: TOKEN_TYPE_NON_MINTABLE,
-        controllerType: CONTROLLER_TYPE_VAULT,
-      },
-      {
-        symbol: TOKEN_SYMBOL_USDC,
-        address: "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
-        type: TOKEN_TYPE_ERC20,
-        controller: null,
-        vault: "0x2CFFb0B0361838A9889Db3F5Ac7984B23D4988E9",
-        tokenType: TOKEN_TYPE_NON_MINTABLE,
-        controllerType: CONTROLLER_TYPE_VAULT,
-      },
-      {
-        symbol: TOKEN_SYMBOL_GOTCHI,
-        address: "0x86935F11C86623deC8a25696E1C19a8659CbF95d",
-        type: TOKEN_TYPE_ERC721,
-        controller: null,
-        vault: "0xF1D1d61EEDDa7a10b494aF7af87D932AC910f3C5",
-        tokenType: TOKEN_TYPE_NON_MINTABLE,
-        controllerType: CONTROLLER_TYPE_VAULT,
-      },
-      {
-        symbol: TOKEN_SYMBOL_GOTCHI_ITEM,
-        address: "0x58de9AaBCaeEC0f69883C94318810ad79Cc6a44f",
-        type: TOKEN_TYPE_ERC1155,
-        controller: null,
-        vault: "0xA421Ed8a4E3cfbFbFd2F621b27bd3C27D71C8b97",
+        vault: "0xE992bA3b6357754d3A956Cc3B581903369324089",
         tokenType: TOKEN_TYPE_NON_MINTABLE,
         controllerType: CONTROLLER_TYPE_VAULT,
       },
@@ -251,240 +154,48 @@ export function getTokensForNetwork(chainId: ChainId): Token[] | null {
     return [
       {
         symbol: TOKEN_SYMBOL_FUD,
-        address: "0x4595Ea2d4d76e067D6701552b8A66743f048A38b",
+        address: "0x2028b4043e6722Ea164946c82fe806c4a43a0fF4",
         type: TOKEN_TYPE_ERC20,
-        controller: "0xBdc2420b1E7F1f97d45b55a2ea9d3b4eB2675B75",
+        controller: "0x596A75D94d1Bf0b63af9F4a67Ce5Eeb427EeDdcE",
         vault: null,
         tokenType: TOKEN_TYPE_SUPER,
         controllerType: CONTROLLER_TYPE_CONTROLLER,
       },
       {
         symbol: TOKEN_SYMBOL_FOMO,
-        address: "0xB501045c286E2e499D761106Da367B7b9D72De9e",
+        address: "0xA32137bfb57d2b6A9Fd2956Ba4B54741a6D54b58",
         type: TOKEN_TYPE_ERC20,
-        controller: "0x321fCfC2cc0d45d2eb252A11bBA8274543819feB",
+        controller: "0x21F842dAb0E1FF3D39E4E8db8510303c80327f61",
         vault: null,
         tokenType: TOKEN_TYPE_SUPER,
         controllerType: CONTROLLER_TYPE_CONTROLLER,
       },
       {
         symbol: TOKEN_SYMBOL_ALPHA,
-        address: "0x73e49fa294e6198400cA693a856816E23D0968Ee",
+        address: "0x15e7CaC885e3730ce6389447BC0f7AC032f31947",
         type: TOKEN_TYPE_ERC20,
-        controller: "0xc87653358D5EDc7716057c865b8cD9ac5eB44A16",
+        controller: "0x32D54F4a89e905EF3af4bd617EfF09CCab32401a",
         vault: null,
         tokenType: TOKEN_TYPE_SUPER,
         controllerType: CONTROLLER_TYPE_CONTROLLER,
       },
       {
         symbol: TOKEN_SYMBOL_KEK,
-        address: "0x59c98408F27517937D2065d61862eBF129B07FD9",
+        address: "0xE52b9170fF4ece4C35E796Ffd74B57Dec68Ca0e5",
         type: TOKEN_TYPE_ERC20,
-        controller: "0x3D57A1a3429825C35B7C432F8885fA1D0Eede460",
+        controller: "0x5e294A13E01e78fbE02C17d966BdA39bd1Ccf6c4",
         vault: null,
         tokenType: TOKEN_TYPE_SUPER,
         controllerType: CONTROLLER_TYPE_CONTROLLER,
       },
       {
         symbol: TOKEN_SYMBOL_GLTR,
-        address: "0x2D400eB3beee681471F59da5B1a0d61A18Dee743",
+        address: "0x4D140CE792bEdc430498c2d219AfBC33e2992c9D",
         type: TOKEN_TYPE_ERC20,
-        controller: "0x8B2D15F61B99De5Fd53dfCFFf8AF995f17f9536d",
+        controller: "0x02135A3D139A5375d30e22Ef5f6945c896aeae65",
         vault: null,
         tokenType: TOKEN_TYPE_SUPER,
         controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-    ];
-  } else if (chainId === ChainId.GEIST) {
-    return [
-      {
-        symbol: TOKEN_SYMBOL_GHST,
-        address: "0x78860E9be983caBCdA2C101cbc185B23Efd1F4Cc",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0x8C1e6969Ca76Ca73a9B002fE8085F6A45B3679e5",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-
-      {
-        symbol: TOKEN_SYMBOL_USDC,
-        address: "0xCFa0bC1ED6135166e9163211b4Ca566a0EE81e35",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0x095D5f7c37C20A7f4f7313d6d99FC9C6E4511ce1",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_FUD,
-        address: "0x45a75B81f95FA0C27fa386cd7923a6AaE1858D8c",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0xb09e9A82B558955B31F84489A46B791288896aBD",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_FOMO,
-        address: "0xA18510f2ABA401A26E94c61de356B6caA9df2761",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0x79E6aA4B2Ca1336b7CA8188B22E7259862A93A46",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_ALPHA,
-        address: "0xcCDA08a4EE78Ee6adf033722365729Bd891cE5C0",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0x5311DA5389e729fE60FABb8FB3cA0847783Fb930",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_KEK,
-        address: "0xae99B27EdF1db7Df6eF7C15E3F40cA5666Bd950D",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0x7f7Ca5CB3a118801DBA5b9E4BCbC274E640625AD",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_GLTR,
-        address: "0x1Cf08D9b7860D1fDB10F01f14e56AbcE15D14Bcf",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0xb5e79F1fBeC25fcDA61A9Ad48D054A356469c586",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-
-      //Matic to Geist
-      {
-        symbol: TOKEN_SYMBOL_GOTCHI,
-        address: "0x6Acc828BbbC6874de40Ca20bfeA7Cd2a2DA8DA8c",
-        type: TOKEN_TYPE_ERC721,
-        controller: "0x5964823256B9C8aC7Ba7Dd94807FDF4DFf728215",
-        vault: null,
-        tokenType: TOKEN_TYPE_MINTABLE,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_GOTCHI_ITEM,
-        address: "0xaC336aB3CFC58698B582205A861A5C6B798c01B9",
-        type: TOKEN_TYPE_ERC1155,
-        controller: "0x4924E6B720D7283bF2d90104A480a9CFadAb1b77",
-        vault: null,
-        tokenType: TOKEN_TYPE_MINTABLE,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-    ];
-  } else if (chainId === ChainId.POLTER) {
-    return [
-      {
-        symbol: TOKEN_SYMBOL_GHST,
-        address: "0xCef3AdFaE288d3304e42582a0786e0276181Acf2",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0x49017f31dB018eAD84E67A382B5f3f796695aAc3",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_USDC,
-        address: "0x6cF5c0342c98E9D344aFd44A8AE399DbF4E018fC",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0x0c8a0818B0816fB5E41073f8715Bae058E5e6C07",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_FUD,
-        address: "0xDe400e81E17a4a0A3346083fdFA0095A3DB8F5ad",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0x19dca6C3b028949c8929a3577fc450bF7FC253CA",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_FOMO,
-        address: "0x6c1416c181ad94e53B7E594A0bcB2ea4a252B685",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0xF7339c32E3bD4d563E55dbC316aA3A09d17A87Da",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_ALPHA,
-        address: "0x26b133c4A2C85D7e980D64726D9C05A504c7099B",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0x94d55f5ef2d3eEac1B86541279f625d8032161D6",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_KEK,
-        address: "0x881024E96fE3fAb34867E735626c29c18f8F9B2C",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0xc5782A8202A184De449672AAD40fb8555EC7B452",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_GLTR,
-        address: "0x0317411380788e7F67a7c1EC40427aB1940f7eD7",
-        type: TOKEN_TYPE_ERC20,
-        controller: "0x6f0747621A676C6938C3af246B57f63d78f59500",
-        vault: null,
-        tokenType: TOKEN_TYPE_SUPER,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_GOTCHI,
-        address: "0x60d629c876E455eFdca83e2b4c85DfB9d4C3C58C",
-        type: TOKEN_TYPE_ERC721,
-        controller: "0x143B8D0e2b6d7791F571A68bf07da2253C0d52CB",
-        vault: null,
-        tokenType: TOKEN_TYPE_MINTABLE,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-      {
-        symbol: TOKEN_SYMBOL_GOTCHI_ITEM,
-        address: "0x954B9F6DaB28F92c88192E2F52FDa5A6Df4A0334", //THIS WILL CHANGE IN PROD
-        type: TOKEN_TYPE_ERC1155,
-        controller: "0x60d629c876E455eFdca83e2b4c85DfB9d4C3C58C",
-        vault: null,
-        tokenType: TOKEN_TYPE_MINTABLE,
-        controllerType: CONTROLLER_TYPE_CONTROLLER,
-      },
-    ];
-  } else if (chainId === ChainId.BASE_SEPOLIA) {
-    return [
-      {
-        symbol: TOKEN_SYMBOL_GOTCHI,
-        address: "0x87C969d083189927049f8fF3747703FB9f7a8AEd",
-        type: TOKEN_TYPE_ERC721,
-        controller: null,
-        vault: "0xEccF8B72c6A354532F27053e54A5b4b912D1e6D6",
-        tokenType: TOKEN_TYPE_NON_MINTABLE,
-        controllerType: CONTROLLER_TYPE_VAULT,
-      },
-      {
-        symbol: TOKEN_SYMBOL_GOTCHI_ITEM,
-        address: "0xC3c2e1Cf099Bc6e1fA94ce358562BCbD5cc59FE5", //THIS WILL CHANGE IN PROD
-        type: TOKEN_TYPE_ERC1155,
-        controller: null,
-        vault: "0x2709f098E8C641796B495bED28A34F9FEA858ac8",
-        tokenType: TOKEN_TYPE_NON_MINTABLE,
-        controllerType: CONTROLLER_TYPE_VAULT,
       },
     ];
   } else return null;

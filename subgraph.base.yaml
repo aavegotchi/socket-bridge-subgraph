@@ -6,9 +6,9 @@ dataSources:
     name: kek
     network: base
     source:
-      address: "0x3D57A1a3429825C35B7C432F8885fA1D0Eede460"
+      address: "0x5e294A13E01e78fbE02C17d966BdA39bd1Ccf6c4"
       abi: Contract
-      startBlock: 14715100
+      startBlock: 34095911
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -28,9 +28,9 @@ dataSources:
     name: alpha
     network: base
     source:
-      address: "0xc87653358D5EDc7716057c865b8cD9ac5eB44A16"
+      address: "0x32D54F4a89e905EF3af4bd617EfF09CCab32401a"
       abi: Contract
-      startBlock: 14715000
+      startBlock: 34095911
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -50,9 +50,9 @@ dataSources:
     name: fomo
     network: base
     source:
-      address: "0x321fCfC2cc0d45d2eb252A11bBA8274543819feB"
+      address: "0x21F842dAb0E1FF3D39E4E8db8510303c80327f61"
       abi: Contract
-      startBlock: 14714800
+      startBlock: 34095911
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -72,9 +72,9 @@ dataSources:
     name: fud
     network: base
     source:
-      address: "0xBdc2420b1E7F1f97d45b55a2ea9d3b4eB2675B75"
+      address: "0x596A75D94d1Bf0b63af9F4a67Ce5Eeb427EeDdcE"
       abi: Contract
-      startBlock: 14673100
+      startBlock: 34095911
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -94,9 +94,9 @@ dataSources:
     name: gltr
     network: base
     source:
-      address: "0x8B2D15F61B99De5Fd53dfCFFf8AF995f17f9536d"
+      address: "0x02135A3D139A5375d30e22Ef5f6945c896aeae65"
       abi: Contract
-      startBlock: 14715200
+      startBlock: 34095911
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
