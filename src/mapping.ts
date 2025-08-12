@@ -1,4 +1,4 @@
-import { BridgingTokens, TokensBridged } from "../generated/ghst/Contract";
+import { BridgingTokens, TokensBridged } from "../generated/fud/Contract";
 import { TokenContract } from "../generated/schema";
 import { ChainId, TX_BRIDGED, TX_BRIDGING } from "./constants";
 import { findTokenForChain, getOrCreateBridgeTransfer } from "./helper";
